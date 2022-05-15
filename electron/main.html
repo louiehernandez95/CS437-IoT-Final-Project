@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            background-color: #F2CC9C !important;
+            font-family: 'Alegreya Sans SC' !important;
+        }
+
+        .button-74 {
+            background-color: #fbeee0;
+            border: 2px solid #422800;
+            border-radius: 30px;
+            box-shadow: #422800 4px 4px 0 0;
+            color: #422800;
+            cursor: pointer;
+            display: inline-block;
+            font-weight: 600;
+            font-size: 18px;
+            padding: 0 18px;
+            line-height: 50px;
+            text-align: center;
+            text-decoration: none;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+        }
+
+        .button-74:hover {
+            background-color: #fff;
+        }
+
+        .button-74:active {
+            box-shadow: #422800 2px 2px 0 0;
+            transform: translate(2px, 2px);
+        }
+
+        @media (min-width: 768px) {
+            .button-74 {
+                min-width: 120px;
+                padding: 0 25px;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Alegreya Sans SC' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="./index.js"></script>
+
+</head>
+
+<body>
+    <div class="w3-content w3-container w3-padding-64">
+        <h2 class="w3-center">CS437: IoT -- Final Project</h2>
+
+        <div class="w3-row w3-padding-16">
+            <div class="w3-center w3-wide">
+                <img src="http://raspberrypi:8080/cam.mjpg"/>
+            </div>
+        </div>
+
+        <div id="buttonContainer" class="w3-row w3-padding-16">
+            <div class="w3-center w3-wide">
+                <button id="dispenserButton" class="button-74" role="button">Dispense</button>
+            </div>
+        </div>
+
+        <div class="w3-row w3-padding-16">
+            <div class="w3-center w3-wide">
+                <input type="range" id="strength" name="Strength" min="0" max="5" value="1" step="1"><label for="strength">Strength</label>
+            </div>
+        </div>
+
+        <div class="w3-row w3-padding-16">
+            <p>
+                <span id="power_dot" style="color:green">&bull;</span> Power: <span id="power">0.0</span>
+                <br>
+                <span id="temprature_dot" style="color:green">&bull;</span> Temperature of the Pi: <span
+                    id="temp">0.0</span>           
+            </p>
+        </div>
+    </div>
+
+</body>
+
+</html>
